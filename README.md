@@ -13,14 +13,14 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 - 😠 Enojo
 - 🤢 Disgusto
 
-**Ubicación**: carpeta `modelos_7_clases/`
+**Ubicación**: carpeta `modelos_7_clases`
 
 ### Modelos entrenados con 3 clases de emociones:
 - 😃 Alegría
 - 😢 Tristeza
 - 😐 Neutralidad
 
-**Ubicación**: carpeta `modelos_3_clases/`
+**Ubicación**: carpeta `modelos_3_clases`
 
 ## Modelos utilizados
 
