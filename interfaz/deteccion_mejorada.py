@@ -61,7 +61,12 @@ class EmotionDetectionApp(FloatLayout):
 
             # Actualizamos las etiquetas según el modelo cargado
             if "7clases" in self.model_path:
-                self.emotion_labels = ['happy', 'sad', 'neutral', 'surprise', 'fear', 'disgust', 'anger']
+                if "ResNet50" in self.model_path:
+                    self.emotion_labels = ['surprise', 'fear', 'disgust', 'happy', 'sad', 'anger', 'neutral']
+                else:
+                    # Para cualquier otro modelo de 7 clases (CNN, VGG16)
+                    self.emotion_labels = ['happy', 'sad', 'neutral', 'surprise', 'fear', 'disgust', 'anger']
+
             else:
                 self.emotion_labels = ['Happy', 'Sad', 'Neutral']
             
