@@ -22,8 +22,11 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 
 **Ubicación**: carpeta `modelos_3_clases`
 
-### Código de Interfaz:
+### Código de Interfaz (BackEnd):
 **Ubicación**: carpeta `interfaz`
+
+### Diseño de Interfaz (FrontEnd):
+**Ubicación**: carpeta `interfaz_diseño`
 
 
 ## Modelos utilizados
