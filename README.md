@@ -22,8 +22,11 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 
 **Ubicación**: carpeta `modelos_3_clases`
 
-### Modelos Entrenado .h5:
-**Ubicación**: carpeta `modelos_entrenados`
+### Modelos Entrenado .h5 7 clases:
+**Ubicación**: carpeta `modelos_entrenados_7_clases`
+
+### Modelos Entrenado .h5 3 clases:
+**Ubicación**: carpeta `modelos_entrenados_3_clases`
 
 ### Código de Interfaz (BackEnd):
 **Ubicación**: carpeta `interfaz`
