@@ -1,0 +1,95 @@
+#:kivy 2.0.0
+
+<EmotionDetectionApp>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Image:
+            id: video
+            size_hint: 1, 0.75
+            pos_hint: {'top': 1}
+        Label:
+            id: welcome_label
+            text: "¡Bienvenido!\n\nEsta interfaz ha sido diseñada con el propósito de ser un posible apoyo a niños con Trastorno del Espectro Autista (TEA) en el reconocimiento de emociones a través de expresiones faciales.\n\nSabemos que para facilitar el aprendizaje es fundamental evitar distracciones. Por eso, esta herramienta ofrece un entorno limpio, sencillo y centrado únicamente en lo esencial.\n\nCuando estes listo selecciona un modelo del menú desplegable y presiona 'Iniciar' para comenzar."
+            font_size: '20sp'
+            color: 0, 0, 0, 1
+            canvas.before:
+                Color:
+                    rgba: 1, 1, 1, 0.85
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: [15]
+            halign: 'center'
+            valign: 'middle'
+            size_hint: 0.8, 0.6
+            pos_hint: {'center_x': 0.5, 'center_y': 0.625}
+            text_size: self.width, None
+
+        # --- SECCIÓN DE CONTROLES INFERIOR MODIFICADA ---
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, 0.25
+            pos_hint: {'x': 0, 'y': 0}
+            padding: 10
+            spacing: 5
+
+            # --> INICIO DE LA MODIFICACIÓN <--
+            # Nuevo BoxLayout horizontal para las etiquetas de texto
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: None
+                height: '40dp' # Le damos una altura fija
+                spacing: 10
+
+                # Etiqueta de emoción a la izquierda
+                Label:
+                    id: emotion_label
+                    text: "Emoción: ---"
+                    font_size: '30sp'
+                    # Propiedades para alinear a la izquierda
+                    halign: 'left'
+                    valign: 'middle'
+                    text_size: self.size # Necesario para que la alineación horizontal funcione
+                    bold: True
+                    color: 1, 1, 0, 1
+
+                # Etiqueta del modelo activo a la derecha
+                Label:
+                    id: active_model_label
+                    text: "Ningún modelo cargado"
+                    font_size: '16sp'
+                    # Propiedades para alinear a la derecha
+                    halign: 'right'
+                    valign: 'middle'
+                    text_size: self.size # Necesario para que la alineación horizontal funcione
+
+            # --> FIN DE LA MODIFICACIÓN <--
+
+            ProgressBar:
+                id: probability_bar
+                max: 100
+                value: 0
+                size_hint_y: None
+                height: '15dp'
+
+            BoxLayout:
+                size_hint_y: None
+                height: '50dp'
+                spacing: 10
+                
+                Spinner:
+                    id: model_spinner
+                    text: 'Seleccionar Modelo'
+                    values: list(app.MODELS.keys())
+                    on_text: root.load_model(self.text)
+                    size_hint_x: 0.6
+
+                Button:
+                    text: 'Iniciar/Detener'
+                    on_press: root.toggle_detection()
+                    size_hint_x: 0.4
