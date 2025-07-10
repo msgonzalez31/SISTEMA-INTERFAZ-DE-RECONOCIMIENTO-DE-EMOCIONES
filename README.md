@@ -4,7 +4,7 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 
 ## Estructura del Proyecto
 
-### Modelos entrenados con 7 clases de emociones:
+### Modelos entrenados con 7 clases de emociones (códigos de python):
 - 😃 Alegría
 - 😢 Tristeza
 - 😐 Neutralidad
@@ -15,12 +15,15 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 
 **Ubicación**: carpeta `modelos_7_clases`
 
-### Modelos entrenados con 3 clases de emociones:
+### Modelos entrenados con 3 clases de emociones (códigos de python):
 - 😃 Alegría
 - 😢 Tristeza
 - 😐 Neutralidad
 
 **Ubicación**: carpeta `modelos_3_clases`
+
+### Modelos Entrenado .h5:
+**Ubicación**: carpeta `modelos_entrenados`
 
 ### Código de Interfaz (BackEnd):
 **Ubicación**: carpeta `interfaz`
