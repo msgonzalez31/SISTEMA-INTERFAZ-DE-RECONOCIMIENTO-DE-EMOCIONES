@@ -22,6 +22,10 @@ Este repositorio contiene los scripts desarrollados para un sistema de reconocim
 
 **Ubicación**: carpeta `modelos_3_clases`
 
+### Código de Interfaz:
+**Ubicación**: carpeta `interfaz`
+
+
 ## Modelos utilizados
 
 - **CNN** desarrollada desde cero
